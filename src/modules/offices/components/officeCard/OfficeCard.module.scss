@@ -1,0 +1,89 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  align-items: center;
+  column-gap: 50px;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+.charts {
+  display: flex;
+  column-gap: 10px;
+}
+
+.chart {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .chartTitle {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    span {
+      font-weight: 700;
+    }
+  }
+}
+
+.fullnessChart {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .chartTitle {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    span {
+      font-weight: 700;
+    }
+  }
+}
+
+.arrow {
+    width: 30px;
+}
+
+.labels {
+  width: 60%;
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+}
+
+.title {
+  flex-grow: 1;
+  width: 20%;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  width: 30%;
+  .labelHeader {
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+  }
+}
+
+
+.childs {
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}

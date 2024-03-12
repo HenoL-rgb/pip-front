@@ -1,0 +1,42 @@
+.wrapper {
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 6px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.tabs {
+  display: flex;
+  column-gap: 30px;
+  .tab {
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    padding-bottom: 5px;
+  }
+}
+
+.offices {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.inputWrapper {
+  border: 1px solid rgb(207, 207, 207);
+  padding: 5px;
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  input {
+    font-size: 16px;
+    outline: none;
+    padding: 10px 12px;
+    border: 0;
+  }
+  border-radius: 5px;
+}
