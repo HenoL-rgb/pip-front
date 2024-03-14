@@ -1,0 +1,14 @@
+.wrapper {
+  display: flex;
+}
+
+.employees, .sales {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  padding: 30px;
+}
+.title {
+  font-size: 21px;
+  margin-bottom: 20px;
+}

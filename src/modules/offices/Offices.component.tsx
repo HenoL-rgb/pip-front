@@ -1,3 +1,4 @@
+//@ts-nocheck
 import React, { useEffect, useState } from 'react';
 import styles from './Offices.module.scss';
 import Page from '../../shared/components/page/Page.component';
@@ -10,26 +11,25 @@ export default function Offices() {
   const { data } = useGetOfficesQuery();
   const [query, setQuery] = useState('');
   const [filter, setFilter] = useState({
-    country: null,
     city: null,
   });
   const [offices, setOffices] = useState([]);
-  console.log(data)
+  console.log(data);
 
   useEffect(() => {
-    // if (data) {
-    if (filter.country) {
-      setOffices(mockOffices.filter((country) => country.country === filter.country));
+     if (data) {
+    if (filter.city) {
+      setOffices(data.filter((city) => city.city === filter.city));
     } else {
-      setOffices(mockOffices);
+      setOffices(data);
     }
-    // }
+     }
   }, [data, filter]);
 
   function findQuery() {
-    for (let country of mockOffices) {
-      if (country.country.includes(query)) {
-        setFilter({ ...filter, country: country.country });
+    for (let city of mockOffices) {
+      if (city.city.includes(query)) {
+        setFilter({ ...filter, city: city.city });
       }
     }
   }
@@ -54,40 +54,38 @@ export default function Offices() {
           <div
             className={styles.tab}
             style={{
-              borderBottomColor: filter.country === null ? 'red' : 'transparent',
+              borderBottomColor: filter.city === null ? 'red' : 'transparent',
             }}
-            onClick={() => setFilter({ country: null, city: null })}
+            onClick={() => setFilter({ city: null })}
           >
             All offices
           </div>
-          {mockOffices.map((country) => (
+          {data?.map((city) => (
             <div
-              onClick={() => setFilter({ ...filter, country: country.country })}
-              key={country.country}
+              onClick={() => setFilter({ ...filter, city: city.city })}
+              key={city.city}
               className={styles.tab}
               style={{
-                borderBottomColor: filter.country === country.country ? 'red' : 'transparent',
+                borderBottomColor: filter.city === city.city ? 'red' : 'transparent',
               }}
             >
-              {country.country}
+              {city.city}
             </div>
           ))}
         </div>
         <div className={styles.offices}>
-          {offices.map((country) => (
+          {offices.map((city) => (
             <OfficeCard
-              key={country.country}
+              key={city.city}
               isOpenable={true}
-              sales={country.sales}
-              title={country.country}
-              fullness={country.fullness}
-              offices={country.cities.reduce((acc, city) => {
-                const offices = city.offices.map((office) => ({
-                  ...office,
-                  address: `${city.city}, ${office.address}`,
-                }));
-                return [...acc, ...offices];
-              }, [])}
+              sales={city.sales}
+              title={city.city}
+              totalAmount={city.totalAmount}
+              fullness={city.fullness}
+              offices={city.apartments.map((office) => ({
+                ...office,
+                address: `${city.city}, ${office.street}`,
+              }))}
             />
           ))}
         </div>

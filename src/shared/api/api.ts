@@ -30,25 +30,35 @@ export const baseQueryWithReauth: BaseQueryFn<
 
   if (result.error && result.error.status === 401) {
     try {
-      const refreshToken = localStorage.getItem('refresh');
+      const user = localStorage.getItem('user');
+      const token = user && JSON.parse(user)?.refresh;
       const refreshResult = await baseQuery(
         {
           url: '/auth/refresh',
           headers: {
-            Authorization: `Bearer ${refreshToken}`,
+            Authorization: `Bearer ${token}`,
           },
           method: 'POST',
         },
         api,
         extraOptions
       );
+      console.log(refreshResult)
 
       if (refreshResult.data) {
         const data = refreshResult.data as {
+          accessToken: string;
           refreshToken: string;
+          roles: string[];
         };
-        localStorage.setItem('refresh', data.refreshToken);
-
+        localStorage.setItem(
+          'user',
+          JSON.stringify({
+            access: data.accessToken,
+            refresh: data.refreshToken,
+            roles: data.roles,
+          })
+        );
         result = await baseQuery(args, api, extraOptions);
       } else {
         //here set true for tests
@@ -57,8 +67,6 @@ export const baseQueryWithReauth: BaseQueryFn<
     } catch {
       api.dispatch(userActions.setAuthorized(false));
     }
-  } else {
-    result = await baseQuery(args, api, extraOptions);
   }
   return result;
 };

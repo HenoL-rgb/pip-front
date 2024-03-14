@@ -1,8 +1,6 @@
 import { RouterProvider } from 'react-router-dom';
 import './App.css';
 import { router } from './shared/router/RootNavigator';
-import { Provider } from 'react-redux';
-import { store } from './shared/store/store';
 import { useAppDispatch, useAppSelector } from './shared/hooks/redux-hooks';
 import { useEffect } from 'react';
 import { userActions } from './modules/user/model/user.slice';

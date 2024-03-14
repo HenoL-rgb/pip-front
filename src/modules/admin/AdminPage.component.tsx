@@ -1,10 +1,10 @@
 import React from 'react';
-import Header from '../../shared/components/header/Header.component';
+import Drawer from './components/Drawer/Drawer.component';
 import { Outlet } from 'react-router-dom';
-import Drawer from '../../shared/components/drawer/Drawer.component';
-import styles from './Home.module.scss';
+import styles from './AdminPage.module.scss';
+import Header from './components/Header/Header.component';
 
-export default function Home() {
+export default function AdminPage() {
   return (
     <div className={styles.wrapper}>
       <Header />

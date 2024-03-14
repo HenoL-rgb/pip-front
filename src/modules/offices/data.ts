@@ -8,224 +8,198 @@ export const mockSales = [
 
 export const mockOffices = [
   {
-    country: 'Belarus',
+    city: 'Vitebsk',
     fullness: 50,
     sales: mockSales,
-    cities: [
+    apartments: [
       {
-        city: 'Vitebsk',
-        offices: [
-          {
-            id: 1,
-            address: 'пр-т Суворова, 28',
-            fullness: 30,
-            sales: mockSales,
-          },
-          {
-            id: 2,
-            address: 'пр-т Строителей, 11',
-            fullness: 8,
-            sales: mockSales,
-          },
-        ],
+        id: 1,
+        address: 'пр-т Суворова, 28',
+        fullness: 30,
+        sales: mockSales,
       },
       {
-        city: 'Brest',
-        offices: [
-          {
-            id: 3,
-            address: 'ул. Москвоская, 209-а',
-            fullness: 30,
-            sales: mockSales,
-          },
-        ],
+        id: 2,
+        address: 'пр-т Строителей, 11',
+        fullness: 8,
+        sales: mockSales,
       },
       {
-        city: 'Gomel',
-        offices: [
-          {
-            id: 4,
-            address: 'ул. Билецкого, 9',
-            fullness: 15,
-            sales: mockSales,
-          },
-        ],
+        id: 3,
+        address: 'ул. Москвоская, 209-а',
+        fullness: 30,
+        sales: mockSales,
       },
       {
-        city: 'Minsk',
-        offices: [
-          {
-            id: 5,
-            address: 'пр. Жукова, 29',
-            fullness: 75,
-            sales: mockSales,
-          },
-          {
-            id: 6,
-            address: 'ул. Смолячкова, 9',
-            fullness: 55,
-            sales: mockSales,
-          },
-        ],
+        id: 4,
+        address: 'ул. Билецкого, 9',
+        fullness: 15,
+        sales: mockSales,
       },
       {
-        city: 'Mogilev',
-        offices: [
-          {
-            id: 7,
-            address: 'ул. Первомайская, 7',
-            fullness: 25,
-            sales: mockSales,
-          },
-        ],
+        id: 5,
+        address: 'пр. Жукова, 29',
+        fullness: 75,
+        sales: mockSales,
+      },
+      {
+        id: 6,
+        address: 'ул. Смолячкова, 9',
+        fullness: 55,
+        sales: mockSales,
+      },
+      {
+        id: 7,
+        address: 'ул. Первомайская, 7',
+        fullness: 25,
+        sales: mockSales,
       },
     ],
   },
   {
-    country: 'Poland',
+    city: 'Minsk',
     fullness: 50,
     sales: mockSales,
-    cities: [
+    apartments: [
       {
-        city: 'Vitebsk',
-        offices: [
-          {
-            id: 1,
-            address: 'пр-т Суворова, 28',
-            fullness: 30,
-            sales: mockSales,
-          },
-          {
-            id: 2,
-            address: 'пр-т Строителей, 11',
-            fullness: 8,
-            sales: mockSales,
-          },
-        ],
+        id: 1,
+        address: 'пр-т Суворова, 28',
+        fullness: 30,
+        sales: mockSales,
       },
       {
-        city: 'Brest',
-        offices: [
-          {
-            id: 3,
-            address: 'ул. Москвоская, 209-а',
-            fullness: 30,
-            sales: mockSales,
-          },
-        ],
+        id: 2,
+        address: 'пр-т Строителей, 11',
+        fullness: 8,
+        sales: mockSales,
       },
       {
-        city: 'Gomel',
-        offices: [
-          {
-            id: 4,
-            address: 'ул. Билецкого, 9',
-            fullness: 15,
-            sales: mockSales,
-          },
-        ],
+        id: 3,
+        address: 'ул. Москвоская, 209-а',
+        fullness: 30,
+        sales: mockSales,
       },
       {
-        city: 'Minsk',
-        offices: [
-          {
-            id: 5,
-            address: 'пр. Жукова, 29',
-            fullness: 75,
-            sales: mockSales,
-          },
-          {
-            id: 6,
-            address: 'ул. Смолячкова, 9',
-            fullness: 55,
-            sales: mockSales,
-          },
-        ],
+        id: 4,
+        address: 'ул. Билецкого, 9',
+        fullness: 15,
+        sales: mockSales,
       },
       {
-        city: 'Mogilev',
-        offices: [
-          {
-            id: 7,
-            address: 'ул. Первомайская, 7',
-            fullness: 25,
-            sales: mockSales,
-          },
-        ],
+        id: 5,
+        address: 'пр. Жукова, 29',
+        fullness: 75,
+        sales: mockSales,
+      },
+      {
+        id: 6,
+        address: 'ул. Смолячкова, 9',
+        fullness: 55,
+        sales: mockSales,
+      },
+      {
+        id: 7,
+        address: 'ул. Первомайская, 7',
+        fullness: 25,
+        sales: mockSales,
       },
     ],
   },
   {
-    country: 'Germany',
+    city: 'Gomel',
     fullness: 50,
     sales: mockSales,
-    cities: [
+    apartments: [
       {
-        city: 'Vitebsk',
-        offices: [
-          {
-            id: 1,
-            address: 'пр-т Суворова, 28',
-            fullness: 30,
-            sales: mockSales,
-          },
-          {
-            id: 2,
-            address: 'пр-т Строителей, 11',
-            fullness: 8,
-            sales: mockSales,
-          },
-        ],
+        id: 1,
+        address: 'пр-т Суворова, 28',
+        fullness: 30,
+        sales: mockSales,
       },
       {
-        city: 'Brest',
-        offices: [
-          {
-            id: 3,
-            address: 'ул. Москвоская, 209-а',
-            fullness: 30,
-            sales: mockSales,
-          },
-        ],
+        id: 2,
+        address: 'пр-т Строителей, 11',
+        fullness: 8,
+        sales: mockSales,
       },
       {
-        city: 'Gomel',
-        offices: [
-          {
-            id: 4,
-            address: 'ул. Билецкого, 9',
-            fullness: 15,
-            sales: mockSales,
-          },
-        ],
+        id: 3,
+        address: 'ул. Москвоская, 209-а',
+        fullness: 30,
+        sales: mockSales,
       },
       {
-        city: 'Minsk',
-        offices: [
-          {
-            id: 5,
-            address: 'пр. Жукова, 29',
-            fullness: 75,
-            sales: mockSales,
-          },
-          {
-            id: 6,
-            address: 'ул. Смолячкова, 9',
-            fullness: 55,
-            sales: mockSales,
-          },
-        ],
+        id: 4,
+        address: 'ул. Билецкого, 9',
+        fullness: 15,
+        sales: mockSales,
       },
       {
-        city: 'Mogilev',
-        offices: [
-          {
-            id: 7,
-            address: 'ул. Первомайская, 7',
-            fullness: 25,
-            sales: mockSales,
-          },
-        ],
+        id: 5,
+        address: 'пр. Жукова, 29',
+        fullness: 75,
+        sales: mockSales,
+      },
+      {
+        id: 6,
+        address: 'ул. Смолячкова, 9',
+        fullness: 55,
+        sales: mockSales,
+      },
+      {
+        id: 7,
+        address: 'ул. Первомайская, 7',
+        fullness: 25,
+        sales: mockSales,
+      },
+    ],
+  },
+  {
+    city: 'Mogilev',
+    fullness: 50,
+    sales: mockSales,
+    apartments: [
+      {
+        id: 1,
+        address: 'пр-т Суворова, 28',
+        fullness: 30,
+        sales: mockSales,
+      },
+      {
+        id: 2,
+        address: 'пр-т Строителей, 11',
+        fullness: 8,
+        sales: mockSales,
+      },
+      {
+        id: 3,
+        address: 'ул. Москвоская, 209-а',
+        fullness: 30,
+        sales: mockSales,
+      },
+      {
+        id: 4,
+        address: 'ул. Билецкого, 9',
+        fullness: 15,
+        sales: mockSales,
+      },
+      {
+        id: 5,
+        address: 'пр. Жукова, 29',
+        fullness: 75,
+        sales: mockSales,
+      },
+      {
+        id: 6,
+        address: 'ул. Смолячкова, 9',
+        fullness: 55,
+        sales: mockSales,
+      },
+      {
+        id: 7,
+        address: 'ул. Первомайская, 7',
+        fullness: 25,
+        sales: mockSales,
       },
     ],
   },

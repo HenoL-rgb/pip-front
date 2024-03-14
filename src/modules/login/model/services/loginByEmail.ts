@@ -23,6 +23,7 @@ export const loginApi = api.injectEndpoints({
           JSON.stringify({
             access: data.accessToken,
             refresh: data.refreshToken,
+            roles: data.roles,
           })
         );
       },

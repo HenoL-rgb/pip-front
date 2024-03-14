@@ -1,3 +1,4 @@
+//@ts-nocheck
 import React, { useCallback, useState } from 'react';
 import styles from './OfficeCard.module.scss';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
@@ -45,9 +46,9 @@ export default function OfficeCard({
   sales,
   isOpenable,
   offices,
+  totalAmount
 }: OfficeCardProps) {
   const [active, setActive] = useState<boolean>(false);
-  const totalAmount = sales.reduce((acc, sale) => (acc += sale.amount), 0);
   const data = {
     datasets: [
       {
@@ -151,7 +152,7 @@ export default function OfficeCard({
         <div className={styles.labels}>
           <div>
             {sales.map((sale, index) => (
-              <div className={styles.label} key={sale.productId}>
+              <div className={styles.label} key={sale.id}>
                 <div className={styles.labelHeader}>
                   <div
                     style={{

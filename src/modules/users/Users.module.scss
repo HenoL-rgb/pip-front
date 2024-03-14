@@ -6,6 +6,7 @@
   flex-direction: column;
   row-gap: 30px;
   background-color: white;
+  flex-grow: 2;
 }
 
 .tabs {
@@ -21,10 +22,10 @@
   }
 }
 
-.offices {
+.users {
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
+  row-gap: 20px;
 }
 
 .inputWrapper {
